@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:n_studio/intropages/intropage1.dart';
 import 'package:n_studio/intropages/intropage2.dart';
 import 'package:n_studio/intropages/intropage3.dart';
-import 'package:n_studio/screen/home.dart';
+
+import 'package:n_studio/screen/login.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class StartingScreen extends StatefulWidget {
@@ -60,7 +61,7 @@ class _StartingScreenState extends State<StartingScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (ctx) => const HomeScreen()));
+                                  builder: (ctx) => const LoginScreen()));
                         },
                         child: const Text(
                           'DONE',
