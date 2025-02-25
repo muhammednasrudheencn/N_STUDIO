@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../constFiles.dart';
+
 class IntroScreen3 extends StatelessWidget {
   const IntroScreen3({super.key});
 
@@ -16,23 +18,11 @@ class IntroScreen3 extends StatelessWidget {
           Column(
             children: [
               Container(
-                  height: csize.height * 0.3,
+                  height: csize.height,
                   width: csize.width,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 54, 28, 83))),
-              Container(
-                  height: csize.height * 0.4,
-                  width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 31, 30, 32))),
-              Container(
-                  height: csize.height * 0.3,
-                  width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 63, 35, 95)))
+                      color: themeColor)),
             ],
           ),
           BackdropFilter(
@@ -65,7 +55,7 @@ class IntroScreen3 extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   const Text(
-                    'for you Creativity',
+                    'for your Creativity',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 28,

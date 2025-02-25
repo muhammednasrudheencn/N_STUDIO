@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:n_studio/constFiles.dart';
 import 'package:n_studio/screen/startingpage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -30,23 +31,23 @@ class _SplashScreenState extends State<SplashScreen> {
             Column(
               children: [
                 Container(
-                    height: csize.height * 0.3,
+                    height: csize.height,
                     width: csize.width,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                         // shape: BoxShape.circle,
-                        color: Color.fromARGB(255, 54, 28, 83))),
-                Container(
-                    height: csize.height * 0.4,
-                    width: csize.width,
-                    decoration: const BoxDecoration(
-                        // shape: BoxShape.circle,
-                        color: Color.fromARGB(255, 31, 30, 32))),
-                Container(
-                    height: csize.height * 0.3,
-                    width: csize.width,
-                    decoration: const BoxDecoration(
-                        // shape: BoxShape.circle,
-                        color: Color.fromARGB(255, 63, 35, 95)))
+                        color: themeColor)),
+                // Container(
+                //     height: csize.height * 0.4,
+                //     width: csize.width,
+                //     decoration: const BoxDecoration(
+                //         // shape: BoxShape.circle,
+                //         color: Color.fromARGB(255, 31, 30, 32))),
+                // Container(
+                //     height: csize.height * 0.3,
+                //     width: csize.width,
+                //     decoration: const BoxDecoration(
+                //         // shape: BoxShape.circle,
+                //         color: Color.fromARGB(255, 63, 35, 95)))
               ],
             ),
             BackdropFilter(
@@ -73,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> startApp() async {
     await Future.delayed(const Duration(seconds: 3));
-    Navigator.push(
+    Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (ctx) => const StartingScreen()));
   }
 }

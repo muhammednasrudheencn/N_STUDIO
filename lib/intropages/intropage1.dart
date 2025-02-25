@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../constFiles.dart';
+
 class IntroScreen1 extends StatelessWidget {
   const IntroScreen1({super.key});
 
@@ -14,23 +16,24 @@ class IntroScreen1 extends StatelessWidget {
           Column(
             children: [
               Container(
-                  height: csize.height * 0.3,
+                  height: csize.height,
                   width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 52, 15, 73))),
-              Container(
-                  height: csize.height * 0.4,
-                  width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 31, 30, 32))),
-              Container(
-                  height: csize.height * 0.3,
-                  width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 63, 35, 95)))
+                  decoration: BoxDecoration(
+                    color: themeColor,
+                    // shape: BoxShape.circle,
+                  )),
+              // Container(
+              //     height: csize.height * 0.4,
+              //     width: csize.width,
+              //     decoration: const BoxDecoration(
+              //         // shape: BoxShape.circle,
+              //         color: Color.fromARGB(255, 189, 157, 206))),
+              // Container(
+              //     height: csize.height * 0.3,
+              //     width: csize.width,
+              //     decoration: const BoxDecoration(
+              //         // shape: BoxShape.circle,
+              //         color: Color.fromARGB(255, 47, 5, 71)))
             ],
           ),
           BackdropFilter(
@@ -39,28 +42,30 @@ class IntroScreen1 extends StatelessWidget {
                 color: Colors.transparent,
               )),
           const Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'WELCOME',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  'To',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 50),
-                Image(image: AssetImage('assets/N_STUDIO-removebg-preview.png'))
-              ],
-            ),
-          )
+              child:
+                  // Column(
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: [
+                  //       Text(
+                  //         'WELCOME',
+                  //         style: TextStyle(
+                  //             color: Colors.white,
+                  //             fontSize: 40,
+                  //             fontWeight: FontWeight.bold),
+                  //       ),
+                  //       Text(
+                  //         'To',
+                  //         style: TextStyle(
+                  //             color: Colors.white,
+                  //             fontSize: 30,
+                  //             fontWeight: FontWeight.bold),
+                  //       ),
+                  //       SizedBox(height: 50),
+                  Image(
+                      image: AssetImage('assets/N_STUDIO-removebg-preview.png'))
+              //   ],
+              // ),
+              )
         ],
       ),
     );

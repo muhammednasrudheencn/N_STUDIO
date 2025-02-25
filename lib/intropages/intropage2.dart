@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../constFiles.dart';
+
 class IntroScreen2 extends StatelessWidget {
   const IntroScreen2({super.key});
 
@@ -16,23 +18,23 @@ class IntroScreen2 extends StatelessWidget {
           Column(
             children: [
               Container(
-                  height: csize.height * 0.3,
+                  height: csize.height,
                   width: csize.width,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 54, 28, 83))),
-              Container(
-                  height: csize.height * 0.4,
-                  width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 31, 30, 32))),
-              Container(
-                  height: csize.height * 0.3,
-                  width: csize.width,
-                  decoration: const BoxDecoration(
-                      // shape: BoxShape.circle,
-                      color: Color.fromARGB(255, 63, 35, 95)))
+                      color: themeColor)),
+              // Container(
+              //     height: csize.height * 0.4,
+              //     width: csize.width,
+              //     decoration: const BoxDecoration(
+              //         // shape: BoxShape.circle,
+              //         color: Color.fromARGB(255, 209, 171, 247))),
+              // Container(
+              //     height: csize.height * 0.3,
+              //     width: csize.width,
+              //     decoration: const BoxDecoration(
+              //         // shape: BoxShape.circle,
+              //         color: Color.fromARGB(255, 63, 35, 95)))
             ],
           ),
           BackdropFilter(
@@ -58,14 +60,7 @@ class IntroScreen2 extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   const Text(
-                    'Think a Prompt and Create',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const Text(
-                    'your dream Image',
+                    'Create; your dream Image',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 28,

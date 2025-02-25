@@ -6,6 +6,8 @@ import 'package:n_studio/intropages/intropage3.dart';
 import 'package:n_studio/screen/login.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../constFiles.dart';
+
 class StartingScreen extends StatefulWidget {
   const StartingScreen({super.key});
 
@@ -42,12 +44,20 @@ class _StartingScreenState extends State<StartingScreen> {
                   onTap: () {
                     controller.jumpToPage(2);
                   },
-                  child: const Text(
-                    'SKIP',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                  child: Container(
+                    width: csize(context),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                    ),
+                    child: const Icon(
+                      Icons.skip_next_rounded,
+                      size: 30,
+                      // style: TextStyle(
+                      //     fontSize: 18,
+                      //     fontWeight: FontWeight.bold,
+                      //     color: Colors.white),
+                    ),
                   ),
                 ),
                 SmoothPageIndicator(
@@ -58,17 +68,25 @@ class _StartingScreenState extends State<StartingScreen> {
                 lastpage
                     ? GestureDetector(
                         onTap: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (ctx) => const LoginScreen()));
                         },
-                        child: const Text(
-                          'DONE',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                        child: Container(
+                          width: csize(context),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                          ),
+                          child: const Icon(
+                            Icons.done_rounded,
+                            size: 30,
+                            // style: TextStyle(
+                            //     fontSize: 18,
+                            //     fontWeight: FontWeight.bold,
+                            //     color: Colors.white),
+                          ),
                         ),
                       )
                     : GestureDetector(
@@ -77,12 +95,20 @@ class _StartingScreenState extends State<StartingScreen> {
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.easeIn);
                         },
-                        child: const Text(
-                          'NEXT',
-                          style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                        child: Container(
+                          width: csize(context),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white,
+                          ),
+                          child: const Icon(
+                            Icons.navigate_next_rounded,
+                            size: 30,
+                            // style: TextStyle(
+                            //     fontSize: 18,
+                            //     fontWeight: FontWeight.bold,
+                            //     color: Colors.white),
+                          ),
                         ),
                       ),
               ],
