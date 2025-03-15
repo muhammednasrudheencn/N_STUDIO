@@ -6,8 +6,6 @@ import 'package:n_studio/intropages/intropage3.dart';
 import 'package:n_studio/screen/login.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../constFiles.dart';
-
 class StartingScreen extends StatefulWidget {
   const StartingScreen({super.key});
 
@@ -20,6 +18,8 @@ class _StartingScreenState extends State<StartingScreen> {
   @override
   Widget build(BuildContext context) {
     PageController controller = PageController();
+    final csize = MediaQuery.of(context).size;
+
     return Stack(
       children: [
         PageView(
@@ -45,7 +45,7 @@ class _StartingScreenState extends State<StartingScreen> {
                     controller.jumpToPage(2);
                   },
                   child: Container(
-                    width: csize(context),
+                    width: csize.width * 0.2,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
@@ -74,7 +74,7 @@ class _StartingScreenState extends State<StartingScreen> {
                                   builder: (ctx) => const LoginScreen()));
                         },
                         child: Container(
-                          width: csize(context),
+                          width: csize.width * 0.2,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.white,
@@ -96,7 +96,7 @@ class _StartingScreenState extends State<StartingScreen> {
                               curve: Curves.easeIn);
                         },
                         child: Container(
-                          width: csize(context),
+                          width: csize.width * 0.2,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Colors.white,
