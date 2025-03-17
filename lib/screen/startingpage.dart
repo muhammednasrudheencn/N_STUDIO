@@ -63,7 +63,8 @@ class _StartingScreenState extends State<StartingScreen> {
                 SmoothPageIndicator(
                   controller: controller,
                   count: 3,
-                  effect: const ExpandingDotsEffect(),
+                  effect: const ExpandingDotsEffect(
+                      dotColor: Colors.white, activeDotColor: Colors.white),
                 ),
                 lastpage
                     ? GestureDetector(

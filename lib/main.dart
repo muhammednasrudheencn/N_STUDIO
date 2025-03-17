@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:n_studio/login/register.dart';
 import 'package:n_studio/screen/splash.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Prompt',
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const RegisterScreen(),
     );
   }
 }
